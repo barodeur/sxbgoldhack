@@ -14,4 +14,8 @@ votes.each_with_index do |vote, index|
   page.choose "group_#{index}_#{vote}"
 end
 
-page.click_button 'Envoyer'
+begin
+  page.click_button 'Envoyer'
+rescue Capybara::ElementNotFound
+  page.click_button 'Submit'
+end
