@@ -15,5 +15,3 @@ votes.each_with_index do |vote, index|
 end
 
 page.click_button 'Envoyer'
-
-binding.pry
