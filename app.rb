@@ -14,6 +14,7 @@ if ARGV[0] == 'RAND'
     n_elements = page.all("[@name='entry.#{i}.group']").count
     page.choose "group_#{i}_#{Random.rand(1..n_elements)}"
   end
+  page.choose "group_1_2" # I am the droid d'or
 else
   votes = [3, 2, 3, 4, 2, 1, 1, 5, 2, 4, 3]
   votes.each_with_index do |vote, index|
